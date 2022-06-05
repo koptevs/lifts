@@ -16,7 +16,8 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [require('tailwindcss'), require('autoprefixer')])
     .alias({
         '@': 'resources/js',
-    });
+    })
+    .version();
 
 if (mix.inProduction()) {
     mix.version();
