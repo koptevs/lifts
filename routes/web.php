@@ -16,8 +16,11 @@ use Inertia\Inertia;
 |
 */
 
-Route::resource('lifts', LiftController::class)->middleware('isAdmin');
+Route::resource('lifts', LiftController::class)->middleware(['auth','isAdmin']);
 
+Route::post('/test', function (Illuminate\Http\Request $request) {
+    dd(request('foo'));
+})->name('test');
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
