@@ -8,6 +8,7 @@
 
 <script>
 export default {
+    name:"Index",
     props: {
         liftManagers: Array,
     },
