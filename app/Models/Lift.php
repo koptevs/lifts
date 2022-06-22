@@ -41,6 +41,15 @@ class Lift extends Model
 //        return 'reg_number'; //lara23 read!
 //    }
 
+    public function liftManager(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(LiftManager::class);
+    }
+
+//    public function inspections()
+//    {
+//        return $this->hasMany(Inspection::class);
+//    }
 
     protected static function newFactory(): LiftFactory
     {
