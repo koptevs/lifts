@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LiftController;
+use App\Http\Controllers\LiftManagerController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;

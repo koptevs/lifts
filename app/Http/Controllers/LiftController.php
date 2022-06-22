@@ -16,7 +16,8 @@ class LiftController extends Controller
      */
     public function index(): Response
     {
-        $lifts = Lift::all();
+//        $lifts = Lift::all();
+        $lifts = Lift::with('liftManager')->get();
         return Inertia::render('Lifts/Index', ['lifts' => $lifts]);
 
 //        dd($lifts);

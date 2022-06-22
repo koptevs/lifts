@@ -1,21 +1,17 @@
 <template>
-
+    <h1 class="font-bold text-4xl text-red-600">Lifts / Index</h1>
+    <pre>
+        {{ lifts }}
+    </pre>
 </template>
 
 <script>
-import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
-import {Link, Head} from '@inertiajs/inertia-vue3';
 
 export default {
     name: "index",
     props: {
-        liftManagers: Array,
+        lifts: Array,
     },
-    components: {
-    }
+    components: {}
 }
 </script>
-
-<style scoped>
-
-</style>
